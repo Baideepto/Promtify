@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Promtify AI logo</title>
+  <desc id="desc">A gradient letter P with a code chevron and AI sparkle.</desc>
+  <defs>
+    <linearGradient id="pGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#51D8FF"/>
+      <stop offset=".38" stop-color="#3478FF"/>
+      <stop offset=".72" stop-color="#8B35FF"/>
+      <stop offset="1" stop-color="#FF5BD7"/>
+    </linearGradient>
+    <linearGradient id="sparkGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5D7FF"/>
+      <stop offset="1" stop-color="#E94DFF"/>
+    </linearGradient>
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Transparent background; suitable for app icons and headers. -->
+  <g filter="url(#glow)">
+    <path fill="url(#pGradient)" d="M112 404V133c0-35 25-60 60-60h125c76 0 127 47 127 113 0 34-13 62-37 82-21 18-48 27-83 27h-55c-27 0-49 8-69 26l-68 61v22c0 18 14 32 32 32h31c18 0 32-14 32-32v-42l-39 35v-35c0-18 7-33 22-46 15-13 34-20 57-20h57c43 0 73-25 73-62 0-37-29-62-73-62h-96c-19 0-32 13-32 32v80l-34 31V133c0-18 13-31 31-31h123c54 0 88 32 88 84 0 50-35 82-89 82h-49c-34 0-61 12-87 35l-67 61v40z"/>
+    <path fill="#F8EFFF" d="M204 166c-8-8-21-8-29 0s-8 21 0 29l25 25-25 25c-8 8-8 21 0 29s21 8 29 0l39-39c8-8 8-21 0-29z"/>
+    <path fill="url(#sparkGradient)" d="M405 273c5 24 14 34 39 40-25 6-34 16-39 40-5-24-14-34-39-40 25-6 34-16 39-40z"/>
+  </g>
+</svg>
