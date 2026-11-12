@@ -30,18 +30,15 @@ const allowedOrigins = (process.env.ORIGINS || "")
   .map(origin => origin.trim())
   .filter(Boolean);
 
-app.use(cors({
-  origin: (origin, callback) => {
-    // Allow requests without an Origin header
-    // and explicitly configured origins.
-    if (!origin || allowedOrigins.includes(origin)) {
-      return callback(null, true);
-    }
-
-    return callback(new Error("Not allowed by CORS"));
-  },
-  credentials: true
-}));
+// CORS configuration
+if (process.env.NODE_ENV !== "production") {
+  app.use(cors({
+    origin: process.env.ORIGINS
+      ? process.env.ORIGINS.split(",").map(origin => origin.trim())
+      : "http://localhost:5173",
+    credentials: true
+  }));
+}
 
 app.use(cookieParser());
 app.use(express.json());
